@@ -87,7 +87,7 @@ claude /plugin update lifeos@lifeos-marketplace
 
 ### 📈 每周复盘 (Weekly Check-in)
 *   **Command**: `/weekly-checkin`
-*   **输入**: 分析项目上下文 (`CLAUDE.md` 等) 以智能发现指标 + 用户交互式提供的本周数据 + 历史指标 `metrics/metrics-history.md`。
+*   **输入**: 分析项目上下文 (`CLAUDE.md` 等) 以智能发现指标 + **针对具体指标的问答数据** + 历史指标 `metrics/metrics-history.md`。
 *   **输出**:
     *   详细报告: `metrics/weekly-report-YYYY-MM-DD.md`
     *   历史数据更新: `metrics/metrics-history.md`
