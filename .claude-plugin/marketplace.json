@@ -1,0 +1,19 @@
+{
+    "name": "lifeos-marketplace",
+    "description": "Marketplace for LifeOS plugins.",
+    "owner": {
+        "name": "Winter",
+        "email": "winter@example.com"
+    },
+    "plugins": [
+        {
+            "name": "lifeos",
+            "description": "LifeOS Plugin - Tools for personal management and productivity.",
+            "source": ".",
+            "version": "1.0.0",
+            "author": {
+                "name": "Winter"
+            }
+        }
+    ]
+}
