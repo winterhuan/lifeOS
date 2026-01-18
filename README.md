@@ -14,10 +14,14 @@
 
 要在 Claude Code 中使用此插件：
 
-1. 克隆此仓库。
-2. 使用 `--plugin-dir` 参数运行 Claude Code：
+1. **添加市场**：
    ```bash
-   claude --plugin-dir /path/to/lifeOS
+   claude /plugin marketplace add winterhuan/lifeOS
+   ```
+
+2. **安装插件**：
+   ```bash
+   claude /plugin install lifeos@lifeos-marketplace
    ```
 
 ## 目录结构
