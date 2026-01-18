@@ -20,11 +20,23 @@ allowed-tools: [view_file, list_dir, write_to_file, read_url_content]
 
 ### 3. 洞察提取
 - 调用 `insight-extractor` Agent。
-- 分析所有读取的内容，寻找深层模式。
+- **任务**：
+    - 识别反复出现的主题和模式。
+    - 追踪思维随时间的演变。
+    - 发现想法之间隐藏的连接。
+    - 提取作者反复提出的**关键问题**。
+    - 标记**突破性时刻** (Breakthrough moments)。
+    - **必须使用作者的原话**。
 
 ### 4. 分析阶段
 - 调用 `brain-dump-analyst` Agent。
-- 基于提取的见解，生成综合分析报告。
+- **任务**：
+    - 创建思维的**可视化思维导图** (ASCII)。
+    - 列出 **Top 10 领悟** (使用原话)。
+    - 展示思维演变的时间线。
+    - 生成生成的行动项。
+    - **内容创意 (针对创作者)**：基于见解生成文章/视频创意。
+    - 使用 Emoji 和 ASCII 艺术使报告可视化。
 
 ### 5. 输出组织
 - 将提取的见解保存至 `braindumps/analysis/insights-YYYY-MM-DD.md`
