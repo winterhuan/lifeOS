@@ -101,4 +101,4 @@ claude /plugin update lifeos@lifeos-marketplace
 ## 致谢 (Credits)
 
 - **Content Research Writer**: 本技能改编自 ComposioHQ 的 [Content Research Writer Skill](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/content-research-writer/SKILL.md)。
-- **Inspiration**: 项目灵感来源于 Alex Finn 的视频 [How I use Claude Code to automate my entire life (5 tricks)](https://www.youtube.com/watch?v=wfiv67NixCY)。
+- **Inspiration**: 项目灵感来源于 Alex Finn 的视频 [How I use Claude Code to automate my entire life (5 tricks)](https://www.youtube.com/watch?v=wfiv67NixCY) 以及 [Claude Code Life OS: 5 Automation Techniques](https://cc.deeptoai.com/docs/en/community-tips/claude-code-life-os)。
