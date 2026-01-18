@@ -13,7 +13,7 @@ allowed-tools: [write_to_file, view_file, list_dir]
 ### 第一阶段：提问 (交互启动)
 
 1. **理解上下文**
-   - 必须先读取 `CLAUDE.md` 或个人/业务文件，以个性化问候语并了解其工作背景。
+   - 必须先读取 `CLAUDE.md` 或任何 personal/business 文件，以个性化问候语并了解其工作背景。
    - 快速浏览用户的 `journal/daily/` 最近几天的记录（如果有），了解近期状态。
 
 2. **发起提问**

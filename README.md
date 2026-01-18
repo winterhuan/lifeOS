@@ -66,24 +66,22 @@ claude /plugin update lifeos@lifeos-marketplace
 
 ### 📰 每日简报 (Daily Brief)
 *   **Command**: `/daily-brief`
-*   **输入**: 分析用户工作区 (`CLAUDE.md`, `braindumps/` 等) 以识别兴趣。
+*   **输入**: 分析用户工作区以识别兴趣。
 *   **输出**:
     *   每日简报: `daily-brief/YYYY-MM-DD-brief.md`
 
 ### 🌅 每日签到 (Daily Check-in)
 *   **Command**: `/daily-checkin`
-*   **输入**: 用户的交互式回复 + 历史日记 `journal/daily/`。
+*   **输入**: 任何 personal/business 文件 + 历史日记 `journal/daily/`。
 *   **输出**:
     *   日记条目: `journal/daily/YYYY-MM-DD.md`
     *   反思分析: `journal/daily/YYYY-MM-DD-reflection.md`
 
 ### 📧 Newsletter 研究 (Newsletter Research)
 *   **Command**: `/newsletter-research`
-*   **输入**: 简报来源 (来自 `newsletter/sources/` 或用户提供) + 互联网内容。
 *   **输出**:
     *   研究分析: `newsletter/research/YYYY-MM-DD-analysis.md`
     *   内容草稿: `newsletter/drafts/YYYY-MM-DD-draft.md`
-    *   指标数据: `metrics/newsletter-metrics.md`
 
 ### 📈 每周复盘 (Weekly Check-in)
 *   **Command**: `/weekly-checkin`
@@ -96,7 +94,7 @@ claude /plugin update lifeos@lifeos-marketplace
 *   **Command**: `/content-research-writer`
 *   **输入**: 用户提供的写作主题、大纲或草稿。
 *   **输出**:
-    *   协作生成的文稿、研究笔记（通常位于用户指定的写作目录或当前目录）。
+    *   协作生成的文稿、研究笔记: `writing/`。
 
 ## 致谢 (Credits)
 
