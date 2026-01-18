@@ -13,7 +13,7 @@ allowed-tools: [write_to_file, view_file, list_dir]
 ### 第一阶段：提问 (交互启动)
 
 1. **理解上下文**
-   - 快速浏览用户的 `life/journal/daily/` 最近几天的记录（如果有），了解近期状态。
+   - 快速浏览用户的 `journal/daily/` 最近几天的记录（如果有），了解近期状态。
 
 2. **发起提问**
    - 加载模板：`skills/daily_checkin/prompts/checkin_questions.md`
@@ -23,7 +23,7 @@ allowed-tools: [write_to_file, view_file, list_dir]
 ### 第二阶段：记录与分析 (用户回复后执行)
 
 3. **保存日记**
-   - 将用户的回答保存至：`life/journal/daily/YYYY-MM-DD.md`
+   - 将用户的回答保存至：`journal/daily/YYYY-MM-DD.md`
 
 4. **生成反思**
    - 调用 `daily-reflection` Agent。
@@ -31,7 +31,7 @@ allowed-tools: [write_to_file, view_file, list_dir]
    - 创建可视化总结。
 
 5. **保存分析**
-   - 将分析结果保存至：`life/journal/daily/YYYY-MM-DD-reflection.md`
+   - 将分析结果保存至：`journal/daily/YYYY-MM-DD-reflection.md`
    - 向用户展示分析的摘要和明天的建议。
 
 ## 关键原则:

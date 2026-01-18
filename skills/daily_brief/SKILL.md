@@ -44,7 +44,7 @@ allowed-tools: [search_web, bash, read_url_content, view_file, write_to_file]
 - 突出显示紧急/有时效性的项目
 
 ### 4. 输出组织
-将简报保存至 `life/daily-brief/YYYY-MM-DD-brief.md`，包含：
+将简报保存至 `daily-brief/YYYY-MM-DD-brief.md`，包含：
 - 按主题划分的清晰章节
 - 所有条目的发布日期
 - "为什么这与你相关"

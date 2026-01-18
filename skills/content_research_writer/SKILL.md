@@ -33,8 +33,8 @@ allowed-tools: [search_web, bash, read_url_content, view_file, write_to_file]
 ### 设置写作环境
 为您的文章创建一个专用文件夹：
 ```bash
-mkdir -p life/writing/my-article-title
-cd life/writing/my-article-title
+mkdir -p writing/my-article-title
+cd writing/my-article-title
 ```
 
 创建草稿文件：
@@ -455,7 +455,7 @@ touch article-draft.md
 推荐的写作项目结构：
 
 ```
-life/writing/article-name/
+writing/article-name/
 ├── outline.md          # 你的大纲
 ├── research.md         # 所有研究和引用
 ├── draft-v1.md         # 初稿

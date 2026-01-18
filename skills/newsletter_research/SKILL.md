@@ -13,7 +13,7 @@ allowed-tools: [bash, read_url_content, view_file, write_to_file]
 ## 流程:
 
 1. **来源发现**
-   - 检查 `life/newsletter/sources/` 目录下的简报 URL
+   - 检查 `newsletter/sources/` 目录下的简报 URL
    - 如果未找到，询问用户竞争对手的简报 URL
    - 同时查找用户自己的简报 URL 以进行风格/声音分析
 
@@ -33,9 +33,9 @@ allowed-tools: [bash, read_url_content, view_file, write_to_file]
    - 基于研究见解，撰写简报草稿
 
 5. **输出组织**
-   - 将研究报告保存至 `life/newsletter/research/YYYY-MM-DD-analysis.md`
-   - 将草稿保存至 `life/newsletter/drafts/YYYY-MM-DD-draft.md`
-   - 将指标保存至 `life/metrics/newsletter-metrics.md`
+   - 将研究报告保存至 `newsletter/research/YYYY-MM-DD-analysis.md`
+   - 将草稿保存至 `newsletter/drafts/YYYY-MM-DD-draft.md`
+   - 将指标保存至 `metrics/newsletter-metrics.md`
 
 ## 主要功能:
 

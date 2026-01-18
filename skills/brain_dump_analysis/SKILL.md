@@ -9,12 +9,12 @@ allowed-tools: [view_file, list_dir, write_to_file, read_url_content]
 ## 流程:
 
 ### 1. 文件夹发现
-- 检查 `life/braindumps/` 是否存在
+- 检查 `braindumps/` 是否存在
 - 如果不存在，创建它并引导用户放入 brain dump 文件
 - 扫描文件夹下的所有文本文件 (.txt, .md)
 
 ### 2. 内容读取
-- 读取 `life/braindumps/` 下的所有文件
+- 读取 `braindumps/` 下的所有文件
 - 保留原始格式和语音
 - 注意文件名或内容中的时间戳
 
@@ -27,8 +27,8 @@ allowed-tools: [view_file, list_dir, write_to_file, read_url_content]
 - 基于提取的见解，生成综合分析报告。
 
 ### 5. 输出组织
-- 将提取的见解保存至 `life/braindumps/analysis/insights-YYYY-MM-DD.md`
-- 将完整分析报告保存至 `life/braindumps/analysis/analysis-YYYY-MM-DD.md`
+- 将提取的见解保存至 `braindumps/analysis/insights-YYYY-MM-DD.md`
+- 将完整分析报告保存至 `braindumps/analysis/analysis-YYYY-MM-DD.md`
 - 向用户提供关键发现的摘要
 
 ## 主要功能:

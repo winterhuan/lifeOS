@@ -59,38 +59,38 @@ claude /plugin update lifeos@lifeos-marketplace
 
 ### 🧠 深度思考分析 (Brain Dump Analysis)
 *   **Command**: `/brain-dump-analysis`
-*   **输入**: 读取 `life/braindumps/` 目录下的所有文本文件 (`.txt`, `.md`)。
+*   **输入**: 读取 `braindumps/` 目录下的所有文本文件 (`.txt`, `.md`)。
 *   **输出**:
-    *   洞察报告: `life/braindumps/analysis/insights-YYYY-MM-DD.md`
-    *   完整分析: `life/braindumps/analysis/analysis-YYYY-MM-DD.md`
+    *   洞察报告: `braindumps/analysis/insights-YYYY-MM-DD.md`
+    *   完整分析: `braindumps/analysis/analysis-YYYY-MM-DD.md`
 
 ### 📰 每日简报 (Daily Brief)
 *   **Command**: `/daily-brief`
-*   **输入**: 分析用户工作区 (`CLAUDE.md`, `life/` 等) 以识别兴趣。
+*   **输入**: 分析用户工作区 (`CLAUDE.md`, `braindumps/` 等) 以识别兴趣。
 *   **输出**:
-    *   每日简报: `life/daily-brief/YYYY-MM-DD-brief.md`
+    *   每日简报: `daily-brief/YYYY-MM-DD-brief.md`
 
 ### 🌅 每日签到 (Daily Check-in)
 *   **Command**: `/daily-checkin`
-*   **输入**: 用户的交互式回复 + 历史日记 `life/journal/daily/`。
+*   **输入**: 用户的交互式回复 + 历史日记 `journal/daily/`。
 *   **输出**:
-    *   日记条目: `life/journal/daily/YYYY-MM-DD.md`
-    *   反思分析: `life/journal/daily/YYYY-MM-DD-reflection.md`
+    *   日记条目: `journal/daily/YYYY-MM-DD.md`
+    *   反思分析: `journal/daily/YYYY-MM-DD-reflection.md`
 
 ### 📧 Newsletter 研究 (Newsletter Research)
 *   **Command**: `/newsletter-research`
-*   **输入**: 简报来源 (来自 `life/newsletter/sources/` 或用户提供) + 互联网内容。
+*   **输入**: 简报来源 (来自 `newsletter/sources/` 或用户提供) + 互联网内容。
 *   **输出**:
-    *   研究分析: `life/newsletter/research/YYYY-MM-DD-analysis.md`
-    *   内容草稿: `life/newsletter/drafts/YYYY-MM-DD-draft.md`
-    *   指标数据: `life/metrics/newsletter-metrics.md`
+    *   研究分析: `newsletter/research/YYYY-MM-DD-analysis.md`
+    *   内容草稿: `newsletter/drafts/YYYY-MM-DD-draft.md`
+    *   指标数据: `metrics/newsletter-metrics.md`
 
 ### 📈 每周复盘 (Weekly Check-in)
 *   **Command**: `/weekly-checkin`
-*   **输入**: 用户交互式提供的指标数据 + 历史指标 `life/metrics/metrics-history.md`。
+*   **输入**: 用户交互式提供的指标数据 + 历史指标 `metrics/metrics-history.md`。
 *   **输出**:
-    *   详细报告: `life/metrics/weekly-report-YYYY-MM-DD.md`
-    *   历史数据更新: `life/metrics/metrics-history.md`
+    *   详细报告: `metrics/weekly-report-YYYY-MM-DD.md`
+    *   历史数据更新: `metrics/metrics-history.md`
 
 ### ✍️ 内容研究写作 (Content Research Writer)
 *   **Command**: `/content-research-writer`
