@@ -13,6 +13,7 @@ allowed-tools: [write_to_file, view_file, list_dir]
 ### 第一阶段：提问 (交互启动)
 
 1. **理解上下文**
+   - 必须先读取 `CLAUDE.md` 或个人/业务文件，以个性化问候语并了解其工作背景。
    - 快速浏览用户的 `journal/daily/` 最近几天的记录（如果有），了解近期状态。
 
 2. **发起提问**
@@ -39,7 +40,14 @@ allowed-tools: [write_to_file, view_file, list_dir]
 
 4. **生成反思**
    - 调用 `daily-reflection` Agent。
-   - 对用户的回答进行深度分析（结合最近几天的记录）。
+   - **上下文**：提供今天的回答，并附带过去 3 天的条目（如果有）。
+   - **指令**：要求 Agent 生成：
+     1. 情绪和能量模式
+     2. 成就势头得分 (Accomplishment momentum score)
+     3. 关于生产力模式的见解
+     4. 明天的温和建议
+     5. 每周趋势（如果数据足够）
+     6. 庆祝胜利（无论多小）
    - 创建可视化总结。
 
 5. **保存分析**
