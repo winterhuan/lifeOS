@@ -9,6 +9,20 @@
 - **每周复盘 (Weekly Check-in)**：分析每周指标和趋势。
 - **深度思考分析 (Brain Dump Analysis)**：从你的想法中提取见解。
 - **Newsletter 研究 (Newsletter Research)**：研究并撰写 Newsletter。
+- **内容研究写作 (Content Research Writer)**：通用型内容创作助手，协助大纲编写、研究和润色。
+- **Dev Browser**：集成 SawyerHood 的浏览器自动化工具，支持 AI 友好的网页浏览和操作。
+
+## 浏览器自动化 (Dev Browser)
+
+本插件集成了 `SawyerHood/dev-browser`。为了获得最佳体验（如复用本地 Cookie 无需登录），建议安装配套的 Chrome 扩展。
+
+**安装 Chrome 扩展 (可选，推荐)**:
+1.  下载最新的扩展程序包 (`extension.zip`)：[dev-browser releases](https://github.com/SawyerHood/dev-browser/releases)
+2.  解压到一个固定目录。
+3.  在 Chrome 中打开 `chrome://extensions`。
+4.  开启右上角 **"开发者模式" (Developer mode)**。
+5.  点击 **"加载已解压的扩展程序" (Load unpacked)** 并选择解压后的目录。
+6.  点击浏览器工具栏的 Dev Browser 图标，切换为 **Active** 即可连接。
 
 ## 安装
 
@@ -23,6 +37,15 @@
    ```bash
    claude /plugin install lifeos@lifeos-marketplace
    ```
+
+## 更新
+
+要更新插件到最新版本，请运行：
+
+```bash
+claude /plugin update lifeos@lifeos-marketplace
+```
+*(或者重新运行安装命令以获取最新版本)*
 
 ## 目录结构
 
@@ -68,3 +91,14 @@
 *   **输出**:
     *   详细报告: `life/metrics/weekly-report-YYYY-MM-DD.md`
     *   历史数据更新: `life/metrics/metrics-history.md`
+
+### ✍️ 内容研究写作 (Content Research Writer)
+*   **Command**: `/content-research-writer`
+*   **输入**: 用户提供的写作主题、大纲或草稿。
+*   **输出**:
+    *   协作生成的文稿、研究笔记（通常位于用户指定的写作目录或当前目录）。
+
+## 致谢 (Credits)
+
+- **Content Research Writer**: 本技能改编自 ComposioHQ 的 [Content Research Writer Skill](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/content-research-writer/SKILL.md)。
+- **Inspiration**: 项目灵感来源于 Alex Finn 的视频 [How I use Claude Code to automate my entire life (5 tricks)](https://www.youtube.com/watch?v=wfiv67NixCY)。

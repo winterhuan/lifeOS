@@ -1,6 +1,7 @@
 ---
 name: Daily Brief
 description: 每日阅读简报：根据用户兴趣，从互联网收集最新新闻，生成供用户个人阅读的新闻摘要。
+allowed-tools: [search_web, bash, read_url_content, view_file, write_to_file]
 ---
 
 # 每日阅读简报 (Daily Brief)
@@ -12,11 +13,16 @@ description: 每日阅读简报：根据用户兴趣，从互联网收集最新�
 - 调用 `interest-analyzer` Agent。
 - **输出重点**：必须关注其生成的 "🔍 搜索配置" 部分，包括新闻、教程、工具和社区讨论。
 
-### 2. 内容收集 (执行搜索)
+### 2. 内容收集 (执行搜索与深度阅读)
 这里的执行必须严格基于第 1 步的输出：
 - 读取 `interest-analyzer` 输出中的搜索查询列表。
-- **逐一执行** `search_web` 工具。
-- **关键**：确保将所有搜索结果的内容完整读入上下文（Context），以便下一步处理。
+- **执行搜索**：使用 `search_web` 获取初步结果列表。
+- **深度获取 (使用 Dev Browser)**：
+    - 调用 `dev-browser` Skill (位于 `skills/dev-browser/`) 来访问关键链接。
+    - **启动服务**：如果尚未运行，先执行 `./skills/dev-browser/server.sh &`。
+    - **读取内容**：使用 Dev Browser 脚本访问页面并提取全文。
+    - **优势**：如果有 Chrome 扩展连接，这可以复用用户的登录状态（如 Substack, Twitter）。
+- **关键**：确保将**全文内容**读入上下文（Context），以便为 Curator 提供丰富的素材。
 
 ### 3. 策划与简报 (News Curator)
 调用 `news-curator` Agent 处理收集到的原始数据：
