@@ -9,7 +9,10 @@
         {
             "name": "lifeos",
             "description": "LifeOS Plugin - Tools for personal management and productivity.",
-            "source": ".",
+            "source": {
+                "source": "github",
+                "repo": "winterhuan/lifeOS"
+            },
             "version": "1.0.0",
             "author": {
                 "name": "Winter"

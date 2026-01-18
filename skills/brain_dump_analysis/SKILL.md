@@ -19,12 +19,12 @@ allowed-tools: [view_file, list_dir, write_to_file, read_url_content]
 - 注意文件名或内容中的时间戳
 
 ### 3. 洞察提取
-- 读取并使用提示词：`.claude/skills/brain_dump_analysis/prompts/extract_insights.md`
-- 分析所有读取的内容，寻找深层模式
+- 调用 `insight-extractor` Agent。
+- 分析所有读取的内容，寻找深层模式。
 
 ### 4. 分析阶段
-- 读取并使用提示词：`.claude/skills/brain_dump_analysis/prompts/analyze_insights.md`
-- 基于提取的见解，生成综合分析报告
+- 调用 `brain-dump-analyst` Agent。
+- 基于提取的见解，生成综合分析报告。
 
 ### 5. 输出组织
 - 将提取的见解保存至 `life/braindumps/analysis/insights-YYYY-MM-DD.md`

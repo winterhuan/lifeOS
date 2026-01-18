@@ -1,27 +1,27 @@
-# LifeOS Plugin for Claude Code
+# LifeOS Claude Code 插件
 
-This repository contains skills, agents, and commands for LifeOS, designed to be used with Claude Code.
+此仓库包含适用于 Claude Code 的 LifeOS Skills、Agents 和 Commands。
 
-## Features
+## 功能特性
 
-- **Daily Brief**: Generate personalized daily news briefs.
-- **Daily Check-in**: Track your daily progress and reflections.
-- **Weekly Check-in**: Analyze weekly metrics and trends.
-- **Brain Dump Analysis**: Extract insights from your thoughts.
-- **Newsletter Research**: Research and write newsletter sources.
+- **每日简报 (Daily Brief)**：生成个性化的每日新闻简报。
+- **每日签到 (Daily Check-in)**：跟踪每日进度和反思。
+- **每周复盘 (Weekly Check-in)**：分析每周指标和趋势。
+- **深度思考分析 (Brain Dump Analysis)**：从你的想法中提取见解。
+- **Newsletter 研究 (Newsletter Research)**：研究并撰写 Newsletter。
 
-## Installation
+## 安装
 
-To use this plugin with Claude Code:
+要在 Claude Code 中使用此插件：
 
-1. Clone this repository.
-2. Run Claude Code with the `--plugin-dir` flag:
+1. 克隆此仓库。
+2. 使用 `--plugin-dir` 参数运行 Claude Code：
    ```bash
    claude --plugin-dir /path/to/lifeOS
    ```
 
-## Directory Structure
+## 目录结构
 
-- `commands/`: Slash commands invocable from Claude.
-- `skills/`: Reusable skills and instructions.
-- `agents/`: Specialized agent personas.
+- `commands/`: Claude 可调用的斜杠命令。
+- `skills/`: 可复用的技能和指令流程。
+- `agents/`: 专业的 Agent 角色定义。

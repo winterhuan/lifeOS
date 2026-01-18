@@ -22,11 +22,11 @@ allowed-tools: [browser_subagent, read_url_content, view_file, write_to_file]
    - 提取关键内容、主题和写作风格
 
 3. **研究阶段**
-   - 读取并使用分析提示词：`.claude/skills/newsletter_research/prompts/analyze_trends.md`
+   - 调用 `content-researcher` Agent。
    - 对获取到的内容进行分析，寻找趋势和机会
 
 4. **写作阶段**
-   - 读取并使用写作提示词：`.claude/skills/newsletter_research/prompts/write_draft.md`
+   - 调用 `newsletter-writer` Agent。
    - 基于研究见解，撰写简报草稿
 
 5. **输出组织**

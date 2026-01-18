@@ -16,7 +16,7 @@ allowed-tools: [write_to_file, view_file, list_dir]
    - 快速浏览用户的 `life/journal/daily/` 最近几天的记录（如果有），了解近期状态。
 
 2. **发起提问**
-   - 加载模板：`.claude/skills/daily_checkin/prompts/checkin_questions.md`
+   - 加载模板：`skills/daily_checkin/prompts/checkin_questions.md`
    - 根据当前时间（早/午/晚）调整问候语。
    - 向用户发送问题，并**等待用户回复**。
 
@@ -26,7 +26,7 @@ allowed-tools: [write_to_file, view_file, list_dir]
    - 将用户的回答保存至：`life/journal/daily/YYYY-MM-DD.md`
 
 4. **生成反思**
-   - 加载分析指令：`.claude/skills/daily_checkin/prompts/analyze_reflection.md`
+   - 调用 `daily-reflection` Agent。
    - 对用户的回答进行深度分析（结合最近几天的记录）。
    - 创建可视化总结。
 

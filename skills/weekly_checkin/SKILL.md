@@ -12,7 +12,7 @@ allowed-tools: [view_file, list_dir, write_to_file, read_terminal]
 
 ### 1. 上下文发现与指标识别
 - 分析 `CLAUDE.md` 及 `life/business/`, `life/docs/` 等文件夹。
-- 读取并使用 `.claude/skills/weekly_checkin/prompts/identify_metrics.md` 来确定适合该用户的指标。
+- 读取并使用 `skills/weekly_checkin/prompts/identify_metrics.md` 来确定适合该用户的指标。
 
 ### 2. 数据收集 (交互)
 - 基于识别出的指标，向用户提问，要求输入本周数据。
@@ -20,7 +20,7 @@ allowed-tools: [view_file, list_dir, write_to_file, read_terminal]
 
 ### 3. 分析与报告
 - 读取历史数据：`life/metrics/metrics-history.md` (如果存在)。
-- 读取并使用 `.claude/skills/weekly_checkin/prompts/analyze_metrics.md` 进行深度分析。
+- 调用 `metrics-analyst` Agent 进行深度分析。
 
 ### 4. 输出组织
 - 更新历史数据：将新数据追加到 `life/metrics/metrics-history.md`。
