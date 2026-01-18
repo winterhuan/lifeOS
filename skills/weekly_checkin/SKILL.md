@@ -12,7 +12,16 @@ allowed-tools: [view_file, list_dir, write_to_file, read_terminal]
 
 ### 1. 上下文发现与指标识别
 - 分析 `CLAUDE.md` 及 `business/`, `docs/` 等文件夹。
-- 读取并使用 `skills/weekly_checkin/prompts/identify_metrics.md` 来确定适合该用户的指标。
+- **指标识别任务**：
+    1.  **识别用户类型**：基于文件内容判断工作/业务类型（创作者、SaaS、开发者、学生等）。
+    2.  **推荐关键指标**：推荐此用户应该跟踪的关键指标（Metrics）。
+    3.  **参考历史**：如果存在 `metrics/metrics-history.md`，必须参考并复用其中的现有指标。
+    4.  **生成提问**：输出一个适合直接向用户提问的 Markdown 列表，要求用户提供本周数据。
+        - 格式示例：
+          > 基于你的[类型]工作，让我们追踪本周进度：
+          > 1. [具体指标 1]:
+          > 2. [具体指标 2]:
+          > ...
 
 ### 2. 数据收集 (交互)
 - 基于识别出的指标，向用户提问，要求输入本周数据。
