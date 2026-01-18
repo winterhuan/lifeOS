@@ -12,35 +12,35 @@ allowed-tools: [bash, read_url_content, view_file, write_to_file]
 
 ## 流程:
 
-1. **来源发现**
-   - 检查 `newsletter/sources/` 目录下的简报 URL
-   - 如果未找到，询问用户竞争对手的简报 URL
-   - 同时查找用户自己的简报 URL 以进行风格/声音分析
+1.  **理解内容上下文 (Context First)**
+    - 读取 `CLAUDE.md` 以了解用户的内容风格。
+    - 分析现有的内容链接和竞争对手链接。
+    - 确定利基市场 (Niche) 和目标受众。
 
-2. **内容获取**
-   - **必须**使用 `dev-browser` 获取所有提供的简报 URL 的最新文章。
-   - **启动服务**：如果尚未运行，先执行 `./skills/dev-browser/server.sh &`。
-   - **读取内容**：使用 Dev Browser 脚本访问页面并提取关键内容、主题和写作风格。
-   - **登录态**：如果连接了 Chrome 扩展，这将自动使用您的登录状态，确保能读取付费或订阅内容。
-   - 提取关键内容、主题和写作风格
+2.  **确定具体研究目标**
+    - 询问用户要研究的具体目标：
+        - 竞争对手的 Newsletter、YouTube 频道或 Twitter 账号。
+        - 具体的话题或趋势。
+        - 分析的时间段。
+    - **等待用户回复**。
 
-3. **研究阶段**
-   - 调用 `content-researcher` Agent。
-   - 对获取到的内容进行分析，寻找趋势和机会
+3.  **执行综合研究**
+    - 使用 `dev-browser` 深度访问目标内容。
+    - 分析竞争对手的内容主题和风格。
+    - 识别热门话题和模式。
+    - 提取关键见解和机会。
 
-4. **写作阶段**
-   - 调用 `newsletter-writer` Agent。
-   - 基于研究见解，撰写简报草稿
+4.  **生成个性化见解**
+    - 调用 `research-analyst` Agent。
+    - 将发现结果与用户的风格和受众进行匹配。
+    - 建议内容创意和切入点。
+    - 提供可操作的建议。
 
-5. **输出组织**
-   - 将研究报告保存至 `newsletter/research/YYYY-MM-DD-analysis.md`
-   - 将草稿保存至 `newsletter/drafts/YYYY-MM-DD-draft.md`
-   - 将指标保存至 `metrics/newsletter-metrics.md`
+5.  **输出组织**
+    - 将研究报告保存至 `newsletter/research/YYYY-MM-DD-research.md`
 
 ## 主要功能:
-
 - 跨多来源的趋势分析
-- 基于用户内容的风格匹配
-- 完整的草稿，而不仅仅是大纲
-- 价值优先，真实的内容
-- 好奇心驱动的标题行
+- 竞争对手深度解构
+- 个性化内容推荐
+- 可操作的行动计划
