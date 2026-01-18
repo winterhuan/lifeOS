@@ -109,14 +109,16 @@
 
 - **[新话题]**: [关键词] - 观察
 
-#### 🔍 搜索配置
+#### 🔍 搜索配置 (必须精确且可执行)
 
-推荐的新闻搜索查询：
+推荐的新闻搜索查询（必须包含日期过滤器）：
 
-1. "[主要兴趣] latest developments"
-2. "[Technology] updates security"
-3. "[Industry] trends 2024"
-4. "[Tool/Framework] new features"
+1. `"[主要兴趣] news after:YYYY-MM-DD"` (设置为 7 天前)
+2. `"[Technology] updates past week"`
+3. `"[Industry] trends 2024 latest"`
+4. `site:official-blog.com "[Tool] release"`
+
+*注意：请确保生成的确切查询字符串可以直接被 search_web 工具使用。*
 
 #### ⚙️ 过滤器
 
