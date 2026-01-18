@@ -10,7 +10,6 @@ allowed-tools: [view_file, list_dir, write_to_file, read_terminal]
 
 ## 流程:
 
-### 1. 上下文发现与指标识别
 ### 1. 上下文发现与指标识别 (Context First)
 - **第一步**：全面分析项目上下文：
     - 读取 `CLAUDE.md` 了解用户和项目。
