@@ -14,7 +14,8 @@ if [ -f "$PLAN_FILE" ]; then
     echo "✅ novel_plan.md 存在"
     
     # 提取状态
-    STATUS=$(grep -E "^状态:" "$PLAN_FILE" 2>/dev/null | head -1 | cut -d':' -f2 | tr -d ' ' || echo "unknown")
+    # 提取状态 (支持 Markdown 表格格式: | 当前状态 | status |)
+    STATUS=$(grep -E "\|\s*当前状态\s*\|" "$PLAN_FILE" 2>/dev/null | head -1 | cut -d'|' -f3 | tr -d '`' | awk '{$1=$1};1' || echo "unknown")
     echo "📊 当前状态: $STATUS"
     
     # 统计章节

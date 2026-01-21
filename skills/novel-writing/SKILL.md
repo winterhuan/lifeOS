@@ -14,19 +14,20 @@ allowed-tools:
   - WebSearch
 hooks:
   PreToolUse:
-    - matcher: "Write|Edit"
+    - matcher: "Write|Edit|Bash|Read|Glob|Grep"
       hooks:
         - type: command
           command: "cat novel_plan.md 2>/dev/null | head -50 || true"
   PostToolUse:
-    - matcher: "Write"
+    - matcher: "Write|Edit"
       hooks:
         - type: command
-          command: "echo '[novel-writing] 文件已保存。请更新 novel_plan.md 状态。'"
+          command: "echo '[novel-writing] 文件已更新。如果这完成了某个阶段，请更新 novel_plan.md 状态。'"
   Stop:
     - hooks:
         - type: command
-          command: "echo '=== 会话结束 ===' >> session_log.md && date >> session_log.md"
+          command: |
+             bash "${CLAUDE_PLUGIN_ROOT}/skills/novel-writing/scripts/check-novel-status.sh"
 ---
 
 # 小说写作系统 (Novel Writing System)
@@ -36,8 +37,8 @@ hooks:
 > 基于 `planning-with-files` 方法论
 
 ```
-上下文窗口 = RAM (易失)
-文件系统 = Disk (持久)
+上下文窗口 (Context Window) = RAM (易失，有限)
+文件系统 (Filesystem) = Disk (持久，无限)
 
 → 所有重要信息必须写入文件
 ```
@@ -45,16 +46,42 @@ hooks:
 ### 核心规则
 
 1. **先创建计划** — 永远不要在没有 `novel_plan.md` 的情况下开始写作
-2. **行动后更新** — 每完成一章，立即更新 `novel_plan.md` 状态
-3. **绝不重复失败** — 如果某方法失败，记录到 `findings.md`，换一种方法
-4. **定期保存发现** — 重要洞察写入 `findings.md`
-5. **会话可恢复** — 中断后可从文件状态恢复
+2. **双动作规则** — 每做 2 次研究/浏览/搜索操作后，立即将关键发现保存到 `findings.md`
+3. **先读后决** — 在做出重大决定之前，阅读计划文件，让目标保持在注意力窗口中
+4. **行动后更新** — 每完成一章，立即更新 `novel_plan.md` 状态
+5. **记录所有错误** — 每个错误都要进入 findings.md，建立知识并防止重复
+6. **绝不重复失败** — 如果某方法失败，换一种方法。追踪尝试过的方法
+
+### 错误记录格式
+
+```markdown
+## 遇到的错误
+| 错误 | 尝试次数 | 解决方案 |
+|------|----------|----------|
+| 角色动机不清晰 | 1 | 增加内心独白场景 |
+| 节奏过慢 | 2 | 删减描写，增加对话 |
+```
 
 ### 状态检查
 ```bash
 # 检查项目状态
 bash skills/novel-writing/scripts/check-novel-status.sh
 ```
+
+## 何时使用此技能
+
+**适用于：**
+- 长篇小说（10万字以上）
+- 系列作品/多卷本
+- 需要复杂世界观的作品
+- 多 POV（视角）叙事
+- 任何需要长期规划的创作项目
+
+**不适用：**
+- 短篇小说（<5000字）
+- 单章内容
+- 快速写作练习
+- 即兴创作
 
 ## 快速开始
 
@@ -241,15 +268,5 @@ cat novel_plan.md | grep -E "^\s*-\s*\[.\]"
 1. 读取 `novel_plan.md` 确定当前进度
 2. 跳过已完成章节
 3. 从上次中断处继续
-
----
-
-## 环境要求
-
-| 依赖 | 用途 | 安装 |
-|------|------|------|
-| Python 3.8+ | 项目管理脚本 | 系统自带 |
-| Node.js 18+ | dev-browser（可选） | `brew install node` |
-| pandoc | epub 导出（可选） | `brew install pandoc` |
 
 
