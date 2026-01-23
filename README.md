@@ -10,6 +10,7 @@
 - **深度思考分析 (Brain Dump Analysis)**：从你的想法中提取见解。
 - **Newsletter 研究 (Newsletter Research)**：研究并撰写 Newsletter。
 - **内容研究写作 (Content Research Writer)**：通用型内容创作助手，协助大纲编写、研究和润色。
+- **Claude 技能创建助手 (Skill Creator)**：创建、打包和管理新的 Claude Skills。
 - **Dev Browser**：集成 SawyerHood 的浏览器自动化工具，支持 AI 友好的网页浏览和操作。
 
 ## 浏览器自动化 (Dev Browser)
