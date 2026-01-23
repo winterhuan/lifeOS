@@ -97,6 +97,24 @@ claude /plugin update lifeos@lifeos-marketplace
 *   **输出**:
     *   协作生成的文稿、研究笔记: `writing/`。
 
+
+### 📚 小说写作 (Novel Writing)
+*   **Command**: `/write-novel`
+*   **输入**: `novel_plan.md`, `world_bible.md`, `references/` 等项目文件。
+*   **输出**:
+    *   章节草稿: `chapters/chapter_XX.md`
+    *   项目计划更新: `novel_plan.md`
+    *   世界观设定更新: `world_bible.md`
+    *   写作日志: `session_log.md`
+    *   发现与洞察: `findings.md`
+
+### 🔍 小说市场研究 (Novel Research)
+*   **Command**: `/novel-research`
+*   **输入**: 互联网热门榜单数据 (起点/番茄/七猫等)。
+*   **输出**:
+    *   市场趋势报告: `research/market_trends.md`
+    *   热门作品分析: `references/trending/`
+
 ## 致谢 (Credits)
 
 - **Content Research Writer**: 本技能改编自 ComposioHQ 的 [Content Research Writer Skill](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/content-research-writer/SKILL.md)。

@@ -1,7 +1,7 @@
 {
   "name": "lifeos",
   "description": "LifeOS Plugin for Claude Code - Tools for personal management and productivity.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Winter"
   }
